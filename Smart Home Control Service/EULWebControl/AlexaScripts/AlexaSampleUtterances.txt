@@ -1,0 +1,139 @@
+﻿LightwaveRFRemote to switch {LightLocation} {OnOff}
+LightwaveRFRemote to switch {OnOff} {LightLocation}
+LightwaveRFRemote to turn {LightLocation} {OnOff}
+LightwaveRFRemote to turn {OnOff} {LightLocation} 
+LightwaveRFRemote to switch the {LightLocation} {OnOff}
+LightwaveRFRemote to switch {OnOff} the {LightLocation}
+LightwaveRFRemote to turn the {LightLocation} {OnOff}
+LightwaveRFRemote to turn {OnOff} the {LightLocation} 
+LightwaveRFRemote to dim {LightLocation} to {PARDimLevelInt} percent
+LightwaveRFRemote to dim the {LightLocation} to {PARDimLevelInt} percent
+
+LightwaveRFRemoteIncomplete to dim {LightLocation}
+LightwaveRFRemoteFollowUp to {PARInt} percent
+LightwaveRFRemoteFollowUp {PARInt} percent
+
+HeatmiserRemote to {Action}
+QueryState_Heatmiser_CurrentAirTempStr what is the current temperature
+QueryState_Heatmiser_IsHotWaterStr is hot water on
+QueryState_Heatmiser_IsHotWaterStr is hot water now on
+QueryState_Heatmiser_IsHotWaterStr is the hot water on
+QueryState_Heatmiser_IsHotWaterStr is the hot water now on
+QueryState_Heatmiser_IsHotWaterStr what is the state of hot water
+QueryState_Heatmiser_IsHotWaterStr what is the hot water state
+QueryState_Heatmiser_SetRoomTemp what temperature is my thermostat set to
+QueryState_Heatmiser_IsHeatingStr is heating on
+QueryState_Heatmiser_IsHeatingStr is heating now on
+QueryState_Heatmiser_IsHeatingStr is the heating on
+QueryState_Heatmiser_IsHeatingStr is the heating now on
+
+HolidayManagerRemote_AddHoliday that I am on holiday from {PARFromDate} at {PARFromTime} until {PARToDate} at {PARToTime}
+HolidayManagerRemote_AddHoliday that I am on holiday from {PARFromDate} at {PARFromTime} till {PARToDate} at {PARToTime}
+HolidayManagerRemote_CancelHoliday to cancel holiday
+HolidayManagerRemote_CancelHoliday to cancel current holiday
+HolidayManagerRemote_CancelHoliday that I am back home
+
+HolidayManagerRemote_AddHolidayIncomplete that I am on holiday until {PARToDate} at {PARToTime}
+HolidayManagerRemote_AddHolidayIncomplete that I am on holiday till {PARToDate} at {PARToTime}
+HolidayManagerRemote_AddHolidayIncomplete that I am on holiday till {PARToDate}
+HolidayManagerRemote_AddHolidayIncomplete that I am on holiday till {PARToTime}
+HolidayManagerRemote_AddHolidayIncomplete that I am on holiday from {PARFromDate} at {PARFromTime}
+HolidayManagerRemote_AddHolidayIncomplete that I am on holiday from {PARFromDate}
+HolidayManagerRemote_AddHolidayIncomplete that I am going on holiday
+HolidayManagerRemote_AddHolidayIncomplete to add a holiday
+
+HolidayManagerRemote_AddHolidayFollowUp {PARTime}
+HolidayManagerRemote_AddHolidayFollowUp from {PARTime}
+HolidayManagerRemote_AddHolidayFollowUp until {PARTime}
+HolidayManagerRemote_AddHolidayFollowUp till {PARTime}
+
+HolidayManagerRemote_AddHolidayFollowUp {PARDate}
+HolidayManagerRemote_AddHolidayFollowUp from {PARDate}
+HolidayManagerRemote_AddHolidayFollowUp until {PARDate}
+HolidayManagerRemote_AddHolidayFollowUp till {PARDate}
+
+HolidayManagerRemote_AddHolidayFollowUp {PARDate} at {PARTime}
+HolidayManagerRemote_AddHolidayFollowUp from {PARDate} at {PARTime}
+HolidayManagerRemote_AddHolidayFollowUp until {PARDate} at {PARTime}
+HolidayManagerRemote_AddHolidayFollowUp till {PARDate} at {PARTime}
+
+HolidayManagerRemote_DeleteNextPlannedHoliday to cancel my next holiday
+HolidayManagerRemote_DeleteNextPlannedHoliday to delete my next holiday
+HolidayManagerRemote_DeleteNextPlannedHoliday to cancel next holiday
+HolidayManagerRemote_DeleteNextPlannedHoliday to delete next holiday
+
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete my holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete my next holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete the holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel my holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel my next holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel the holiday starting on {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete holiday starting {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete my holiday starting {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete my next holiday starting {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to delete the holiday starting {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel holiday starting {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel my holiday starting {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel my next holiday starting {PARDate}
+HolidayManagerRemote_DeletePlannedHolidayStartingOn to cancel the holiday starting {PARDate}
+
+QueryState_HolidayManager_NextPlannedHoliday when is my next holiday
+QueryState_HolidayManager_NextPlannedHoliday when is my next planned holiday
+
+MoodsRemote to set {Mood} mood
+MoodsRemote to switch on {Mood} mood
+MoodsRemote to turn on {Mood} mood
+MoodsRemote that I want to {Mood}
+MoodsRemote that I am {Mood}
+
+OnkyoRemote to {ReceiverAction}
+OnkyoRemote to ask the receiver to {ReceiverAction}
+
+OnkyoRemote_ReceiverOn to switch receiver on
+OnkyoRemote_ReceiverOn to switch the receiver on
+OnkyoRemote_ReceiverOn to switch on receiver
+OnkyoRemote_ReceiverOn to switch on the receiver
+OnkyoRemote_ReceiverOn to turn receiver on
+OnkyoRemote_ReceiverOn to turn the receiver on
+OnkyoRemote_ReceiverOn to turn on receiver
+OnkyoRemote_ReceiverOn to turn on the receiver
+OnkyoRemote_ReceiverOff to switch receiver off
+OnkyoRemote_ReceiverOff to switch the receiver off
+OnkyoRemote_ReceiverOff to switch off receiver
+OnkyoRemote_ReceiverOff to switch off the receiver
+OnkyoRemote_ReceiverOff to turn receiver off
+OnkyoRemote_ReceiverOff to turn the receiver off
+OnkyoRemote_ReceiverOff to turn off receiver
+OnkyoRemote_ReceiverOff to turn off the receiver
+
+OnkyoRemote_Mute to mute the receiver
+OnkyoRemote_Mute to mute receiver
+OnkyoRemote_UnMute to unmute the receiver
+OnkyoRemote_UnMute to unmute receiver
+
+OnkyoRemote_SetVolumeIncomplete to change receiver volume
+OnkyoRemote_SetVolumeIncomplete to change the receiver volume
+OnkyoRemote_SetVolumeIncomplete to set receiver volume
+OnkyoRemote_SetVolumeIncomplete to set the receiver volume
+OnkyoRemote_SetVolume to set receiver volume to {PARVolumeInt}
+OnkyoRemote_SetVolume to set the receiver volume to {PARVolumeInt}
+OnkyoRemote_SetVolume to change receiver volume to {PARVolumeInt}
+OnkyoRemote_SetVolume to change the receiver volume to {PARVolumeInt}
+
+OnkyoRemote_SetVolumeFollowUp {PARInt}
+
+SonosRemote_StopKitchenPlayer to stop kitchen player
+SonosRemote_StopKitchenPlayer to stop the kitchen player
+SonosRemote_PlayFavoriteByNameKitchen to play {PARStationStr} in the kitchen
+SonosRemote_MuteKitchen to mute the kitchen player
+SonosRemote_MuteKitchen to mute kitchen player
+SonosRemote_MuteKitchen to mute the player in the kitchen
+SonosRemote_UnMuteKitchen to unmute the kitchen player
+SonosRemote_UnMuteKitchen to unmute kitchen player
+SonosRemote_UnMuteKitchen to unmute the player in the kitchen
+
+GreenIQRemote to water my {PARZone} for {PARMinutes} minutes
+GreenIQRemote to water the {PARZone} for {PARMinutes} minutes
+GreenIQRemote to water {PARZone} for {PARMinutes} minutes

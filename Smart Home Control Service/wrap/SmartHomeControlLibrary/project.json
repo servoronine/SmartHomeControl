@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net461": {
+      "wrappedProject": "../../ElectricityUsageLogger/SmartHomeControlLibrary.csproj",
+      "bin": {
+        "assembly": "../../ElectricityUsageLogger/obj/{configuration}/SmartHomeControlLibrary.dll",
+        "pdb": "../../ElectricityUsageLogger/obj/{configuration}/SmartHomeControlLibrary.pdb"
+      },
+      "dependencies": {
+        "Microsoft.Bcl": "1.1.10",
+        "Microsoft.Bcl.Build": "1.0.21",
+        "Microsoft.Net.Http": "2.2.29",
+        "System.Net.Http": "4.0.0",
+        "IRTrans.NET": "1.0.0-*"
+      }
+    },
+    "net451": {
+      "wrappedProject": "../../ElectricityUsageLogger/SmartHomeControlLibrary.csproj",
+      "bin": {
+        "assembly": "../../ElectricityUsageLogger/obj/{configuration}/SmartHomeControlLibrary.dll",
+        "pdb": "../../ElectricityUsageLogger/obj/{configuration}/SmartHomeControlLibrary.pdb"
+      },
+      "dependencies": {
+        "Microsoft.Bcl": "1.1.10",
+        "Microsoft.Bcl.Build": "1.0.21",
+        "Microsoft.Net.Http": "2.2.29",
+        "System.Net.Http": "4.0.0",
+        "IRTrans.NET": "1.0.0-*",
+        "UPnP": "1.0.0-*",
+        "UPNP_AV": "1.0.0-*"
+      }
+    }
+  }
+}

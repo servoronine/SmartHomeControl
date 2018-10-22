@@ -1,0 +1,47 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ElectricityUsageLogger.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EnergyLoggingConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.0.58;Initial Catalog=EnergyLogging;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.0.58;Initial Catalog=EnergyLogging;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="WifiLinkAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.0.61</Value>
+    </Setting>
+    <Setting Name="WifiLinkPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9760</Value>
+    </Setting>
+    <Setting Name="LocalIPAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.0.54</Value>
+    </Setting>
+    <Setting Name="HeatmiserAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.0.60</Value>
+    </Setting>
+    <Setting Name="HeatmiserPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8068</Value>
+    </Setting>
+    <Setting Name="WebWeatherAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://datapoint.metoffice.gov.uk/public/data/</Value>
+    </Setting>
+    <Setting Name="WebWeatherParams" Type="System.String" Scope="User">
+      <Value Profile="(Default)">val/wxobs/all/xml/3740?res=hourly&amp;key=b08fb588-2bf3-4e27-9f81-3356e3215962</Value>
+    </Setting>
+    <Setting Name="WifiLinkPollInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="HeatmiserPollInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">900</Value>
+    </Setting>
+    <Setting Name="WebWeatherPollInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3600</Value>
+    </Setting>
+    <Setting Name="HeatmiserPin" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">5325</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

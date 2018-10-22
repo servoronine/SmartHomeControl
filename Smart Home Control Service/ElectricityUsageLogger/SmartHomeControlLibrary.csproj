@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartHomeControl</RootNamespace>
+    <AssemblyName>SmartHomeControlLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FuzzyString, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FuzzyString.1.0.0\lib\FuzzyString.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IRTrans.NET">
+      <HintPath>.\IRTrans.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UPnP, Version=1.0.4561.18411, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Devices\Sonos\Libs\UPnP.dll</HintPath>
+    </Reference>
+    <Reference Include="UPNP_AV, Version=1.0.4561.18412, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Devices\Sonos\Libs\UPNP_AV.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Devices\Generic\Devices\DeviceConnectionStatusUpdateHandler.cs" />
+    <Compile Include="Devices\Generic\Devices\StateResponseFormatAttribute.cs" />
+    <Compile Include="Devices\Generic\Events\DelayTriggerAction.cs" />
+    <Compile Include="Devices\Generic\Events\DeviceStateChanged.cs" />
+    <Compile Include="Devices\Generic\Devices\GenericIPDevice.cs" />
+    <Compile Include="Devices\Generic\Devices\GenericWebDevice.cs" />
+    <Compile Include="Devices\Generic\Events\DeviceStateChangedEventArgs.cs" />
+    <Compile Include="Devices\Generic\Events\FeedbackReceivedFromDevice.cs" />
+    <Compile Include="Devices\Generic\Events\SenderTypeEnum.cs" />
+    <Compile Include="Devices\Generic\Exceptions\AlreadyLoggingException.cs" />
+    <Compile Include="Devices\Generic\Events\FeedbackReceivedFromDeviceEventArgs.cs" />
+    <Compile Include="Devices\Generic\Devices\GenericDeviceState.cs" />
+    <Compile Include="Devices\Generic\Gateways\GenericIPGateway.cs" />
+    <Compile Include="Devices\Generic\Gateways\GenericJSONWebGateway.cs" />
+    <Compile Include="Devices\Generic\Gateways\GenericXMLWebGateway.cs" />
+    <Compile Include="Devices\Generic\Devices\IStatefulDevice.cs" />
+    <Compile Include="Devices\GreenIQ\EnablePortMessage.cs" />
+    <Compile Include="Devices\GreenIQ\GreenIQConfigurationResponse.cs" />
+    <Compile Include="Devices\GreenIQ\GreenIQHub.cs" />
+    <Compile Include="Devices\GreenIQ\GreenIQHubState.cs" />
+    <Compile Include="Devices\GreenIQ\IrrigationPort.cs" />
+    <Compile Include="Devices\GreenIQ\PortConfigurationEnum.cs" />
+    <Compile Include="Devices\GreenIQ\PortsConfiguration.cs" />
+    <Compile Include="Devices\Heatmiser\HeatmiserStateValueChange.cs" />
+    <Compile Include="Devices\Heatmiser\HeatmiserTempReading.cs" />
+    <Compile Include="Devices\Heatmiser\HeatmiserThermostat.cs" />
+    <Compile Include="Devices\HolidayManager\CurrentHolidayStateEnum.cs" />
+    <Compile Include="Devices\Jawbone\JawboneState.cs" />
+    <Compile Include="Devices\Jawbone\JawboneUP3.cs" />
+    <Compile Include="Devices\Jawbone\UpBandData.cs" />
+    <Compile Include="Devices\Jawbone\UpBandDataItem.cs" />
+    <Compile Include="Devices\Jawbone\UpBandDataItemConverter.cs" />
+    <Compile Include="Devices\Jawbone\UpBandEvent.cs" />
+    <Compile Include="Devices\Jawbone\UpBandMeta.cs" />
+    <Compile Include="Devices\LightwaveRF\EnergyMeterData.cs" />
+    <Compile Include="Devices\HolidayManager\HolidayManagerState.cs" />
+    <Compile Include="Devices\HolidayManager\HolidayManager.cs" />
+    <Compile Include="Devices\LocationManager\GoogleElement.cs" />
+    <Compile Include="Devices\LocationManager\GoogleResponse.cs" />
+    <Compile Include="Devices\LocationManager\GoogleResult.cs" />
+    <Compile Include="Devices\LocationManager\GoogleRow.cs" />
+    <Compile Include="Devices\LocationManager\LocationManager.cs" />
+    <Compile Include="Devices\LocationManager\LocationStateEnum.cs" />
+    <Compile Include="Devices\Onkyo\OnkyoStationTriggerAction.cs" />
+    <Compile Include="Devices\Onkyo\OnkyoVolumeTriggerAction.cs" />
+    <Compile Include="Devices\PC\PC.cs" />
+    <Compile Include="Devices\PC\PCState.cs" />
+    <Compile Include="Devices\HolidayManager\PlannedHoliday.cs" />
+    <Compile Include="Devices\LightwaveRF\ElectricityUsageMonitor.cs" />
+    <Compile Include="Devices\LightwaveRF\LightwaveRFDimmer.cs" />
+    <Compile Include="Devices\LightwaveRF\LightwaveRFHelper.cs" />
+    <Compile Include="Devices\LightwaveRF\LightwaveRFSocket.cs" />
+    <Compile Include="Devices\LightwaveRF\LightwaveRFTriggerAction.cs" />
+    <Compile Include="Devices\Onkyo\OnkyoReceiver.cs" />
+    <Compile Include="Devices\Onkyo\OnkyoState.cs" />
+    <Compile Include="Devices\Samsung\SamsungTV.cs" />
+    <Compile Include="Devices\Sonos\MediaInfo.cs" />
+    <Compile Include="Devices\Sonos\PlayerInfo.cs" />
+    <Compile Include="Devices\Sonos\PlayerStatus.cs" />
+    <Compile Include="Devices\Sonos\SonosDeviceFoundDelegate.cs" />
+    <Compile Include="Devices\Sonos\SonosDIDL.cs" />
+    <Compile Include="Devices\Sonos\SonosDiscovery.cs" />
+    <Compile Include="Devices\Sonos\SonosGateway.cs" />
+    <Compile Include="Devices\Sonos\SonosItem.cs" />
+    <Compile Include="Devices\Sonos\SonosPlayer.cs" />
+    <Compile Include="Devices\Sonos\SonosPlayerController.cs" />
+    <Compile Include="Devices\Sonos\SonosPlayerControllerState.cs" />
+    <Compile Include="Devices\Sonos\SonosPlayerState.cs" />
+    <Compile Include="Devices\Sonos\SonosSearchResult.cs" />
+    <Compile Include="Devices\Sonos\SonosTrack.cs" />
+    <Compile Include="Devices\Sonos\SonosZone.cs" />
+    <Compile Include="EventProcessor\CommandServer\RequestDeviceStateDelegate.cs" />
+    <Compile Include="EventProcessor\GatewayList.cs" />
+    <Compile Include="EventProcessor\MessagesOccuredWhenInvokingHandlerDelegate.cs" />
+    <Compile Include="EventProcessor\Processor.cs" />
+    <Compile Include="Devices\Heatmiser\HeatmiserState.cs" />
+    <Compile Include="Devices\Heatmiser\SwitchSetting.cs" />
+    <Compile Include="Devices\Heatmiser\TemperatureSwitchSetting.cs" />
+    <Compile Include="EventProcessor\RemoteList.cs" />
+    <Compile Include="EventProcessor\TriggerToBeInvoked.cs" />
+    <Compile Include="EventProcessor\ZoneList.cs" />
+    <Compile Include="Helpers\LoggingHelper.cs" />
+    <Compile Include="Helpers\HeartbeatInfo.cs" />
+    <Compile Include="Helpers\SolarInfo.cs" />
+    <Compile Include="Helpers\WebClientHelper.cs" />
+    <Compile Include="EventProcessor\CommandServer\CommandServer.cs" />
+    <Compile Include="EventProcessor\CommandServer\ExternalCommandReceivedDelegate.cs" />
+    <Compile Include="EventProcessor\CommandServer\ICommandServer.cs" />
+    <Compile Include="Remotes\Generic\RemoteCommandList.cs" />
+    <Compile Include="Devices\Generic\Devices\DeviceConnectionStatusEventArgs.cs" />
+    <Compile Include="Devices\IRTrans\IRTransRemote.cs" />
+    <Compile Include="Remotes\Generic\ReceivedCommand.cs" />
+    <Compile Include="Remotes\Generic\GenericRemote.cs" />
+    <Compile Include="Remotes\Generic\GenericRemoteCommand.cs" />
+    <Compile Include="EventProcessor\LocalSettings.cs" />
+    <Compile Include="Devices\Generic\Events\GenericTriggerAction.cs" />
+    <Compile Include="Devices\MetOffice\WeatherInfo.cs" />
+    <Compile Include="Devices\Generic\Devices\GenericDevice.cs" />
+    <Compile Include="Devices\Generic\Devices\GenericDimmableDevice.cs" />
+    <Compile Include="Devices\Generic\Gateways\GenericDeviceGateway.cs" />
+    <Compile Include="Devices\Generic\Devices\GenericLockableDevice.cs" />
+    <Compile Include="Devices\Generic\Events\GenericTrigger.cs" />
+    <Compile Include="Devices\Generic\Devices\GenericZone.cs" />
+    <Compile Include="Devices\LightwaveRF\LightwaveRFGateway.cs" />
+    <Compile Include="Helpers\StateObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Devices\MetOffice\WebWeatherLogger.cs" />
+    <Compile Include="Helpers\SocketsHelper.cs" />
+    <Compile Include="Schedules\Schedule.cs" />
+    <Compile Include="Schedules\ScheduleList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Devices\Heatmiser\heatmiser_v3_protocol_3.9.pdf" />
+    <None Include="Devices\Onkyo\ISCP-V1.26_2013.xlsx" />
+    <None Include="Devices\Sonos\UPnP-av-RenderingControl-v1-Service.pdf" />
+    <None Include="packages.config" />
+    <None Include="Devices\Onkyo\onkyo.xls" />
+    <None Include="Settings.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Devices\Sonos\Libs\UPnP.dll" />
+    <Content Include="Devices\Sonos\Libs\UPNP_AV.dll" />
+    <Content Include="Settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SQL DB Script\EnergyLoggerDB.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

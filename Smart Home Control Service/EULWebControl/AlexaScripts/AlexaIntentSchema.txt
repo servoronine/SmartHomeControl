@@ -1,0 +1,253 @@
+﻿{
+  "intents": [
+    {
+      "intent": "LightwaveRFRemote",
+      "slots": [
+        {
+          "name": "LightLocation",
+          "type": "LIGHT_LOCATION"
+        },
+        {
+          "name": "OnOff",
+          "type": "ON_OFF"
+        },
+        {
+          "name": "PARDimLevelInt",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "LightwaveRFRemoteIncomplete",
+      "slots": [
+        {
+          "name": "LightLocation",
+          "type": "LIGHT_LOCATION"
+        },
+        {
+          "name": "PARDimLevelInt",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },   
+    {
+      "intent": "LightwaveRFRemoteFollowUp",
+      "slots": [
+        {
+          "name": "PARInt",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },     
+    {
+     "intent": "HeatmiserRemote",
+     "slots": [
+       {
+         "name": "Action",
+         "type": "HEATMISER_ACTION"
+       }
+       ]
+    },
+    {
+     "intent": "HolidayManagerRemote_AddHoliday",
+     "slots": [
+       {
+         "name": "PARFromDate",
+         "type": "AMAZON.DATE"
+       },
+       {
+         "name": "PARFromTime",
+         "type": "AMAZON.TIME"
+       },
+       {
+         "name": "PARToDate",
+         "type": "AMAZON.DATE"
+       },
+       {
+         "name": "PARToTime",
+         "type": "AMAZON.TIME"
+       }        
+       ]
+    },
+    {
+   	   "intent": "HolidayManagerRemote_AddHolidayIncomplete",
+   	   "slots": [
+       {
+         "name": "PARFromDate",
+         "type": "AMAZON.DATE"
+       },
+       {
+         "name": "PARFromTime",
+         "type": "AMAZON.TIME"
+       },
+       {
+         "name": "PARToDate",
+         "type": "AMAZON.DATE"
+       },
+       {
+         "name": "PARToTime",
+         "type": "AMAZON.TIME"
+       }        
+       ]
+    },    
+    {
+     "intent": "HolidayManagerRemote_AddHolidayFollowUp",
+     "slots": [
+       {
+         "name": "PARDate",
+         "type": "AMAZON.DATE"
+       },
+       {
+         "name": "PARTime",
+         "type": "AMAZON.TIME"
+       }       
+       ]
+    },
+    {
+     "intent": "HolidayManagerRemote_CancelHoliday",
+     "slots": [   
+       ]
+    },    
+    {
+     "intent": "MoodsRemote",
+     "slots": [
+       {
+         "name": "Mood",
+         "type": "MOOD_TYPE"
+       }     
+       ]
+    },
+    {
+     "intent": "OnkyoRemote",
+     "slots": [
+       {
+         "name": "ReceiverAction",
+         "type": "RECEIVER_ACTION"
+       }     
+       ]
+    },
+    {
+     "intent": "OnkyoRemote_Mute",
+     "slots": [  
+       ]
+    },  
+    {
+     "intent": "OnkyoRemote_UnMute",
+     "slots": [  
+       ]
+    },    
+    {
+     "intent": "OnkyoRemote_SetVolume",
+     "slots": [
+       {
+         "name": "PARVolumeInt",
+         "type": "AMAZON.NUMBER"
+       }     
+       ]
+    },
+    {
+     "intent": "OnkyoRemote_SetVolumeIncomplete",
+     "slots": [   
+       {
+         "name": "PARVolumeInt",
+         "type": "AMAZON.NUMBER"
+       }  
+       ]
+    },
+    {
+     "intent": "OnkyoRemote_SetVolumeFollowUp",
+     "slots": [
+       {
+         "name": "PARInt",
+         "type": "AMAZON.NUMBER"
+       }     
+       ]
+    },
+    {
+     "intent": "OnkyoRemote_ReceiverOn",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "OnkyoRemote_ReceiverOff",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "QueryState_Heatmiser_CurrentAirTempStr",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "QueryState_HolidayManager_NextPlannedHoliday",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "HolidayManagerRemote_DeleteNextPlannedHoliday",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "HolidayManagerRemote_DeletePlannedHolidayStartingOn",
+     "slots": [   
+       {
+         "name": "PARDate",
+         "type": "AMAZON.DATE"
+       }  
+       ]
+    },
+    {
+     "intent": "QueryState_Heatmiser_IsHotWaterStr",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "QueryState_Heatmiser_SetRoomTemp",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "QueryState_Heatmiser_IsHeatingStr",
+     "slots": [   
+       ]
+    },
+    {
+     "intent": "SonosRemote_PlayFavoriteByNameKitchen",
+     "slots": [   
+       {
+         "name": "PARStationStr",
+         "type": "SONOS_STATION"
+       }
+       ]
+    },
+    {
+     "intent": "SonosRemote_StopKitchenPlayer",
+     "slots": [    
+       ]
+    },
+    {
+     "intent": "SonosRemote_MuteKitchen",
+     "slots": [    
+       ]
+    },
+    {
+     "intent": "SonosRemote_UnMuteKitchen",
+     "slots": [    
+       ]
+    },
+    {
+     "intent": "GreenIQRemote",
+     "slots": [   
+       {
+         "name": "PARZone",
+         "type": "GREENIQ_ZONE"
+       },
+       {
+         "name": "PARMinutes",
+         "type": "AMAZON.NUMBER"
+       }       
+       ]
+    }
+  ]
+}

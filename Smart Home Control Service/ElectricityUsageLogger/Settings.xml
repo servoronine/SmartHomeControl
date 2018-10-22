@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definition xmlns="http://smarthomecontrol.voronin.co.uk"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://smarthomecontrol.voronin.co.uk settings.xsd">
+
+  <!-- You need to populate your global settings here-->
+  <LocalSettings address="IP ADDRESS OF THE PC RUNNING THIS SERVICE" 
+                 dbConnection="SQL SERVER CONNECTION STRING"
+                 macAddress="MAC ADDRESS OF THE PC RUNNING THIS SERVICE, e.g. XX:XX:XX:XX:XX:XX"
+                 homeCoordinates="YOUR HOME COORDINATES"/>
+
+  <!--Gateways section is used to describe gateway devices. For example, LightwaveRF has a gateway which is then used to control lights and switches.
+  It is not a device itself, i.e. its only function is to control other devices.
+  This can also be a generic gateway. For example, any JSON message to online services will pass through the GenericJSONWebGateway-->
+  <Gateways>
+    <Gateway name="GenericIPGateway" type="SmartHomeControl.Devices.Generic.Gateways.GenericIPGateway"></Gateway>
+    <Gateway name="LightwaveRFGateway" type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFGateway">
+      <Location>IP_ADDRESS</Location>
+      <Port>9760</Port>
+    </Gateway>
+    <Gateway name="GenericXMLWebGateway" type="SmartHomeControl.Devices.Generic.Gateways.GenericXMLWebGateway"></Gateway>
+    <Gateway name="GenericJSONWebGateway" type="SmartHomeControl.Devices.Generic.Gateways.GenericJSONWebGateway"></Gateway>
+    <Gateway name="SonosGateway" type="SmartHomeControl.Devices.Sonos.SonosGateway"></Gateway>
+  </Gateways>
+
+  <!--Schedules section describes various schedules that can then be used to launch specific tasks-->
+  <Schedules>
+    <Schedule name="BackupOnSchedule" validDuringHoliday="true">
+      <Daily>
+        <Time>11:45</Time>
+      </Daily>
+    </Schedule>
+    <Schedule name="BackupOffSchedule" validDuringHoliday="true">
+      <Daily>
+        <Time>14:00</Time>
+      </Daily>
+    </Schedule>
+    <Schedule name="NightSchedule" validDuringHoliday="false">
+      <Mon>
+        <Time>01:00</Time>
+      </Mon>
+      <Tue>
+        <Time>01:00</Time>
+      </Tue>
+      <Wed>
+        <Time>01:00</Time>        
+      </Wed>
+      <Thu>
+        <Time>01:00</Time>
+      </Thu>
+      <Fri>
+        <Time>01:00</Time>
+      </Fri>
+      <Sat>
+        <Time>02:00</Time>
+      </Sat>
+      <Sun>
+        <Time>02:00</Time>        
+      </Sun>
+    </Schedule>
+    <Schedule name="DaySchedule" validDuringHoliday="false">
+      <Mon>
+        <Time>07:30</Time>
+      </Mon>
+      <Tue>
+        <Time>07:30</Time>
+      </Tue>
+      <Wed>
+        <Time>07:30</Time>
+      </Wed>
+      <Thu>
+        <Time>07:30</Time>
+      </Thu>
+      <Fri>
+        <Time>07:30</Time>
+      </Fri>
+      <Sat>
+        <Time>09:00</Time>
+      </Sat>
+      <Sun>
+        <Time>09:00</Time>
+      </Sun>
+    </Schedule>
+  </Schedules>
+
+  <!--Remotes sections is used to describe your various remote controls. This can be a physical remote control, like your TV remote or virtual
+  like the app on your phone. Here you also describe the various commands or buttons that the remote has as well as voice prompts to activate them-->
+  <Remotes>
+    <Remote name="LightwaveRFRemote" commandLifeTime="1">
+      <Commands>
+        <command>RegisterWithLightwaveRF</command>
+        <command voicePrompt="sitting area light on|on sitting area light">SittingAreaLightOn</command>
+        <command voicePrompt="sitting area light off|off sitting area light">SittingAreaLightOff</command>
+        <command voicePrompt="dining area light on|on dining area light">DiningAreaLightOn</command>
+        <command voicePrompt="dining area light off|off dining area light">DiningAreaLightOff</command>
+        <command voicePrompt="corner light on|on corner light">CornerLightOn</command>
+        <command voicePrompt="corner light off|off corner light">CornerLightOff</command>
+        <command voicePrompt="sitting area light">SittingAreaLightDim</command>
+        <command voicePrompt="dining area light">DiningAreaLightDim</command>
+        <command voicePrompt="corner light">CornerLightDim</command>
+        <command voicePrompt="hard drive socket on|on hard drive socket">HDDSocketOn</command>
+        <command voicePrompt="hard drive socket off|off hard drive socket">HDDSocketOff</command>
+        <command voicePrompt="sonos socket on|on sonos socket">SonosSocketOn</command>
+        <command voicePrompt="sonos socket off|off sonos socket">SonosSocketOff</command>
+        <command voicePrompt="kitchen sonos socket on|on kitchen sonos socket">KitchenSonosSocketOn</command>
+        <command voicePrompt="kitchen sonos socket off|off kitchen sonos socket">KitchenSonosSocketOff</command>
+        <command voicePrompt="kitchen cabinet lights on|on kitchen cabinet lights">KitchenCabinetLightsOn</command>
+        <command voicePrompt="kitchen cabinet lights off|off kitchen cabinet lights">KitchenCabinetLightsOff</command>
+        <command voicePrompt="all lounge lights on|all lights in the lounge on|on all lounge lights|on all lights in the lounge">AllLoungeLightsOn</command>
+        <command voicePrompt="all lounge lights off|all lights in the lounge off|off all lounge lights|off all lights in the lounge">AllLoungeLightsOff</command>
+        <command voicePrompt="kitchen light on|on kitchen light">KitchenLightOn</command>
+        <command voicePrompt="kitchen light off|off kitchen light">KitchenLightOff</command>
+        <command voicePrompt="front door light on|on front door light">FrontDoorLightOn</command>
+        <command voicePrompt="front door light off|off front door light">FrontDoorLightOff</command>
+        <command voicePrompt="hallway light on|on hallway light">HallwayLightOn</command>
+        <command voicePrompt="hallway light off|off hallway light">HallwayLightOff</command>        
+      </Commands>
+    </Remote>
+    <Remote name="HeatmiserRemote" commandLifeTime="1">
+      <Commands>
+        <command>SetDateTime</command>
+        <command voicePrompt="toggle hot water" voiceResponse="OK. Hot water status changed.">ToggleHotWater</command>
+        <command voicePrompt="switch on hot water|switch hot water on|turn on hot water|turn hot water on" voiceResponse="OK. Hot water is now on.">SwitchOnHotWater</command>
+        <command voicePrompt="switch off hot water|switch hot water off|turn off hot water|turn hot water off" voiceResponse="OK. Hot water is now off.">SwitchOffHotWater</command>
+        <command voicePrompt="make it warmer" voiceResponse="OK. I've increased the temperature by one degree.">IncreaseTemp</command>
+        <command voicePrompt="make it colder" voiceResponse="OK. I've decreased the temperature by one degree.">DecreaseTemp</command>
+      </Commands>
+    </Remote>
+    <Remote name="TimerRemote" commandLifeTime="1">
+      <Commands>
+        <command onProgramStart="true">LogEnergyConsumption</command>
+        <command onProgramStart="true">LogHeatmiserState</command>
+        <command onProgramStart="true">LogWebWeather</command>
+        <command onProgramStart="true">StartCapturingJawboneData</command>
+        <command onProgramStart="true">StartCapturingGreenIQData</command>
+      </Commands>
+    </Remote>
+    <Remote name="OnkyoRemote" commandLifeTime="1">
+      <Commands>
+        <command>ReceiverOn</command>
+        <command>ReceiverOff</command>
+        <command voicePrompt="make the receiver louder">VolumeUpVoice</command>
+        <command voicePrompt="make the receiver quieter">VolumeDownVoice</command>
+        <command voicePrompt="play selected station">PlaySelectedStation</command>
+        <command voicePrompt="stop the receiver">Stop</command>
+        <command voicePrompt="press back on the receiver">Back</command>
+        <command voicePrompt="mute the receiver">Mute</command>
+        <command voicePrompt="unmute the receiver">UnMute</command>
+        <command>SetVolume</command>
+      </Commands>
+    </Remote>
+    <Remote name="MoodsRemote" commandLifeTime="1">
+      <Commands>
+        <command voicePrompt="relaxing" voiceResponse="OK. It's always good to take a moment to relax.">MusicWithDimmedLights</command>
+        <command voicePrompt="watch TV" voiceResponse="OK. Enjoy your movie.">MovieWithDimmedLights</command>
+        <command voicePrompt="done watching TV" voiceResponse="OK. I switched all devices off.">TVOff</command>
+      </Commands>
+    </Remote>
+    <Remote name="HolidayManagerRemote" commandLifeTime="1">
+      <Commands>
+        <command>UpdateHolidays</command>
+        <command voiceResponse="OK. I've added a holiday from {0} to {1}.">AddHoliday</command>
+        <command voiceResponse="Noted. Nice to be back home, is it not?">CancelHoliday</command>
+        <command voiceResponse="Ok. Your next planned holiday will be deleted.">DeleteNextPlannedHoliday</command>
+        <command voiceResponse="OK. Your holiday starting on {0} will be deleted if found.">DeletePlannedHolidayStartingOn</command>
+      </Commands>
+    </Remote>
+    <Remote name="PCRemote" commandLifeTime="1">
+      <Commands>
+        <command>TurnOnStudyPC</command>
+        <command>TurnOffStudyPC</command>
+        <command>TurnOnLoungePC</command>
+        <command>TurnOffLoungePC</command>
+      </Commands>
+    </Remote>
+    <Remote name="SonosRemote" commandLifeTime="1">
+      <Commands>
+        <Command voiceResponse="Enjoy your music">PlayFavoriteByNameKitchen</Command>
+        <Command>StopKitchenPlayer</Command>
+        <Command>MuteKitchen</Command>
+        <Command>UnMuteKitchen</Command>
+        <Command>SetVolumeKitchen</Command>
+        <Command>VolumeUpVoice</Command>
+        <Command>VolumeDownVoice</Command>
+      </Commands>
+    </Remote>
+    <Remote name="LocationManagerRemote" commandLifeTime="1">
+      <Commands>
+        <Command>LogLocation</Command>
+      </Commands>
+    </Remote>
+    <Remote name="GreenIQRemote" commandLifeTime="1">
+      <Commands>
+        <Command voicePrompt="lawn" voiceResponse="OK. Watering your lawn for {0} minutes.">WaterLawn</Command>
+        <Command voicePrompt="ceanothus" voiceResponse="OK. Watering your ceanothus for {0} minutes.">WaterCeanothus</Command>
+        <Command voicePrompt="far lawn edge" voiceResponse="OK. Watering your far lawn edge for {0} minutes.">WaterFarLawnEdge</Command>
+        <Command voicePrompt="near lawn edge" voiceResponse="OK. Watering your near lawn edge for {0} minutes.">WaterNearLawnEdge</Command>
+      </Commands>
+    </Remote>
+  </Remotes>
+
+  
+  <!--This is the main section that describes your smart home. Your home is divided into zones. Each zone can contain a number of devices. Each device can have one or more triggers.
+  Device section describes what kind of device this is (class created in the program) and its location (ip address, port, etc).
+  Trigger section describes the remote that can launch this trigger and also the type of action that needs to happen.
+  This is all, again, coded in a way that you can simply add a class for actionType tag and method of this class in the action tag
+  The command part describes which buttons on the remote will trigger this event.
+  You can specify multiple buttons which means that these buttons will need to pressed in a particular sequence to trigger this event
+  It is important to note that this section should describe devices, not gateways (for example a light, not a LightwaveRF gateway
+  A device CAN have a gateway tag which will outline the gateway that should be used-->
+  <Zones>
+    <Zone name="Lounge" number="1">
+      <Device type="SmartHomeControl.Devices.IRTrans.IRTransRemote" name="IRTransRemote" number="1" gateway="GenericIPGateway" location="IP_ADDRESS" retryDelay="20000" retryCount="0">
+      </Device>
+      <Device type="SmartHomeControl.Devices.PC.PC" name="LoungePC" number="1" gateway="GenericIPGateway" location="IP_ADDRESS" macAddress="MAC_ADDRESS">
+        <trigger senderType="Remote" sender="PCRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="TurnOn">
+          <command>TurnOnLoungePC</command>
+        </trigger>
+        <trigger senderType="Remote" sender="PCRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="TurnOff">
+          <command>TurnOffLoungePC</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="TurnOn">
+          <command>MovieWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="3" action="TurnOff">
+          <command>TVOff</command>
+        </trigger>        
+      </Device>
+      <Device type="SmartHomeControl.Devices.Onkyo.OnkyoReceiver" name="OnkyoReceiver" number="1" gateway="GenericIPGateway" location="IP_ADDRESS" port="60128">
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SwitchReceiverOn">
+          <command>ReceiverOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SwitchReceiverOff">
+          <command>ReceiverOff</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SwitchReceiverOff">
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="VolumeUpVoice">
+          <command>VolumeUpVoice</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="VolumeDownVoice">
+          <command>VolumeDownVoice</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="2" action="PlaySelectedStation">
+          <command>PlaySelectedStation</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="Back">
+          <command>Back</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="2" action="Stop">
+          <command>Stop</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="Mute">
+          <command>Mute</command>
+        </trigger>
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="UnMute">
+          <command>UnMute</command>
+        </trigger>        
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="2" action="SwitchReceiverOn">
+          <command>MusicWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.DelayTriggerAction" sequence="3" action="Pause" value="10000">
+          <command>MusicWithDimmedLights</command>
+        </trigger>  
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Onkyo.OnkyoVolumeTriggerAction" sequence="4" action="SetVolume" value="29">
+          <command>MusicWithDimmedLights</command>
+        </trigger>          
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="5" action="OpenNetworkFavorites">
+          <command>MusicWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.DelayTriggerAction" sequence="6" action="Pause" value="5000">
+          <command>MusicWithDimmedLights</command>
+        </trigger>          
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Onkyo.OnkyoStationTriggerAction" sequence="7" action="PlaySelectedStation" value="1">
+          <command>MusicWithDimmedLights</command>
+        </trigger>      
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="2" action="SwitchReceiverOn">
+          <command>MovieWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="3" action="OpenTvCd">
+          <command>MovieWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Onkyo.OnkyoVolumeTriggerAction" sequence="4" action="SetVolume" value="29">
+          <command>MovieWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="5" action="SwitchTVOn">
+          <command>MovieWithDimmedLights</command>
+        </trigger>        
+        <trigger senderType="Remote" sender="OnkyoRemote" actionType="SmartHomeControl.Devices.Onkyo.OnkyoVolumeTriggerAction" sequence="4" action="SetVolume">
+          <command>SetVolume</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SwitchTVOff">
+          <command>TVOff</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="2" action="SwitchReceiverOff">
+          <command>TVOff</command>
+        </trigger>        
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFDimmer" name="DiningLight" number="2" gateway="LightwaveRFGateway">
+        <trigger senderType="Device" sender="IRTransRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="SetDimLevel" value="50" >
+          <command>blue</command>
+          <command>5</command>
+          <command>0</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>DiningAreaLightOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>DiningAreaLightOff</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="SetDimLevel">
+          <command>DiningAreaLightDim</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>MovieWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>MusicWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>AllLoungeLightsOff</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1">
+          <command>AllLoungeLightsOn</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFDimmer" name="SittingLight" number="3" gateway="LightwaveRFGateway">
+        <trigger senderType="Device" sender="IRTransRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="2" action="SetDimLevel" value="50" >
+          <command>yellow</command>
+          <command>5</command>
+          <command>0</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>SittingAreaLightOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SittingAreaLightOff</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="SetDimLevel">
+          <command>SittingAreaLightDim</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>MovieWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>MusicWithDimmedLights</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>AllLoungeLightsOff</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1">
+          <command>AllLoungeLightsOn</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFDimmer" name="CornerLight" number="5" gateway="LightwaveRFGateway">
+        <trigger senderType="Device" sender="IRTransRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="3" action="SetDimLevel" value="50" >
+          <command>green</command>
+          <command>5</command>
+          <command>0</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>CornerLightOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>CornerLightOff</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="SetDimLevel">
+          <command>CornerLightDim</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>AllLoungeLightsOff</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1">
+          <command>AllLoungeLightsOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="SetDimLevelIfDark" value="50">
+          <command>MusicWithDimmedLights</command>
+        </trigger>  
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="SetDimLevelIfDark" value="50">
+          <command>MovieWithDimmedLights</command>
+        </trigger>      
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFSocket" name="HDDSocket" number="1" gateway="LightwaveRFGateway">
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>HDDSocketOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>HDDSocketOff</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFSocket" name="SonosSocket" number="4" gateway="LightwaveRFGateway">
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>SonosSocketOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SonosSocketOff</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>SetHouseInAtHomeMode</command>
+        </trigger>
+        <trigger senderType="Schedule" sender="Schedule" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>NightSchedule</command>
+        </trigger>
+        <trigger senderType="Schedule" sender="Schedule" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1">
+          <command>DaySchedule</command>
+        </trigger>
+        <trigger senderType="Device" sender="LocationManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>Away</command>
+        </trigger>
+        <trigger senderType="Device" sender="LocationManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>Home</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.Samsung.SamsungTV" name="SamsungTV" number="1" gateway="GenericIPGateway" location="IP_ADDRESS" port="7676">
+        <trigger senderType="Remote" sender="MoodsRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="2" action="SwitchTVOff">
+          <command>TVOff</command>
+        </trigger>
+      </Device>
+    </Zone>
+    <Zone name="Kitchen" number="2">
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFSocket" name="SonosSocket" number="1" gateway="LightwaveRFGateway">
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>KitchenSonosSocketOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>KitchenSonosSocketOff</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>SetHouseInAtHomeMode</command>
+        </trigger>
+        <trigger senderType="Schedule" sender="Schedule" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0">
+          <command>NightSchedule</command>
+        </trigger>
+        <trigger senderType="Schedule" sender="Schedule" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1">
+          <command>DaySchedule</command>
+        </trigger>
+        <trigger senderType="Device" sender="LocationManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>Away</command>
+        </trigger>
+        <trigger senderType="Device" sender="LocationManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>Home</command>
+        </trigger>        
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFSocket" name="CabinetLightsSocket" number="2" gateway="LightwaveRFGateway">
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>KitchenCabinetLightsOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>KitchenCabinetLightsOff</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.Sonos.SonosPlayerController" name="KitchenSonos3" number="0" gateway="SonosGateway" playerName="Kitchen">
+        <trigger senderType="Remote" sender="SonosRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="PlayFavoriteByName">
+          <command>PlayFavoriteByNameKitchen</command>
+        </trigger>
+        <trigger senderType="Remote" sender="SonosRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="StopPlayer" >
+          <command>StopKitchenPlayer</command>
+        </trigger>
+        <trigger senderType="Remote" sender="SonosRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="Mute" >
+          <command>MuteKitchen</command>
+        </trigger>
+        <trigger senderType="Remote" sender="SonosRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="UnMute" >
+          <command>UnMuteKitchen</command>
+        </trigger>
+        <trigger senderType="Remote" sender="SonosRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="VolumeUpVoice" >
+          <command>VolumeUpVoice</command>
+        </trigger>   
+        <trigger senderType="Remote" sender="SonosRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="VolumeDownVoice" >
+          <command>VolumeDownVoice</command>
+        </trigger>          
+        <trigger senderType="Remote" sender="SonosRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SetVolume" >
+          <command>SetVolumeKitchen</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFDimmer" name="KitchenLight" number="3" gateway="LightwaveRFGateway">
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>KitchenLightOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>KitchenLightOff</command>
+        </trigger>
+      </Device>      
+    </Zone>
+    <Zone name="Hallway" number="3">
+      <Device type="SmartHomeControl.Devices.HolidayManager.HolidayManager" name="HolidayManager" number="1" gateway="GenericIPGateway">
+        <trigger senderType="Remote" sender="HolidayManagerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="UpdateHolidays">
+          <command>UpdateHolidays</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HolidayManagerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="AddHoliday">
+          <command>AddHoliday</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HolidayManagerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="CancelCurrentHoliday">
+          <command>CancelHoliday</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HolidayManagerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="DeleteNextPlannedHoliday">
+          <command>DeleteNextPlannedHoliday</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HolidayManagerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="DeletePlannedHolidayStartingOn">
+          <command>DeletePlannedHolidayStartingOn</command>
+        </trigger>        
+      </Device>
+      <Device type="SmartHomeControl.Devices.Jawbone.JawboneUP3" name="JawboneUP3" number="1" gateway="GenericJSONWebGateway" location="https://jawbone.com/nudge/api/v.1.1/users/@me/" accessKey="YOUR_ACCESS_KEY" loggingPollInterval="3600">
+        <trigger senderType="Remote" sender="TimerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="StartCapturingData">
+          <command>StartCapturingJawboneData</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.Heatmiser.HeatmiserThermostat" name="Heatmiser" number="1" gateway="GenericIPGateway" location="IP_ADDRESS" port="8068" loggingPollInterval="600" pinCode="PIN_CODE">
+        <trigger senderType="Remote" sender="TimerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="LogHeatmiserState">
+          <command>LogHeatmiserState</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HeatmiserRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SetDateTime">
+          <command>SetDateTime</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SetAtHomeMode">
+          <command>SetHouseInAtHomeMode</command>
+        </trigger>
+        <trigger senderType="Device" sender="HolidayManager" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SetHolidayMode">
+          <command>SetHouseInHolidayMode</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HeatmiserRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="ToggleHotWater">
+          <command>ToggleHotWater</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HeatmiserRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SwitchOnHotWater">
+          <command>SwitchOnHotWater</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HeatmiserRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SwitchOffHotWater">
+          <command>SwitchOffHotWater</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HeatmiserRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="IncreaseTempByOneDegree">
+          <command>IncreaseTemp</command>
+        </trigger>
+        <trigger senderType="Remote" sender="HeatmiserRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="DecreaseTempByOneDegree">
+          <command>DecreaseTemp</command>
+        </trigger>
+        <trigger senderType="Device" sender="LocationManager" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="SetAwayMode">
+          <command>Away</command>
+        </trigger>
+        <trigger senderType="Device" sender="LocationManager" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="CancelAwayMode">
+          <command>Home</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.MetOffice.WebWeatherLogger" name="WebWeatherLogger" number="1" gateway="GenericXMLWebGateway" location="http://datapoint.metoffice.gov.uk/public/data/" params="val/wxobs/all/xml/3740?res=hourly&amp;key=YOUR_KEY" loggingPollInterval="3600">
+        <trigger senderType="Remote" sender="TimerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="LogWebWeather">
+          <command>LogWebWeather</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.LocationManager.LocationManager" name="LocationManager" number="1" gateway="GenericXMLWebGateway" location="https://maps.googleapis.com/maps/api/distancematrix/json" apiKey="GOOGLE_API_KEY">
+        <trigger senderType="Remote" sender="LocationManagerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="LogLocation">
+          <command>LogLocation</command>
+        </trigger>
+      </Device>      
+      <Device type="SmartHomeControl.Devices.LightwaveRF.ElectricityUsageMonitor" name="EnergyMonitor" number="0"  gateway="LightwaveRFGateway" loggingPollInterval="60">
+        <trigger senderType="Remote" sender="TimerRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="InitiateLogging">
+          <command>LogEnergyConsumption</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="Register">
+          <command>RegisterWithLightwaveRF</command>
+        </trigger>
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFDimmer" name="HallwayLight" number="1" gateway="LightwaveRFGateway">
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>HallwayLightOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>HallwayLightOff</command>
+        </trigger>        
+      </Device>
+      <Device type="SmartHomeControl.Devices.LightwaveRF.LightwaveRFDimmer" name="FrontDoorLight" number="2" gateway="LightwaveRFGateway">
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="1" >
+          <command>FrontDoorLightOn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="LightwaveRFRemote" actionType="SmartHomeControl.Devices.LightwaveRF.LightwaveRFTriggerAction" sequence="1" action="ToggleDeviceState" value="0" >
+          <command>FrontDoorLightOff</command>
+        </trigger>
+      </Device>      
+    </Zone>
+    <Zone name="Study" number="4">
+      <Device type="SmartHomeControl.Devices.PC.PC" name="StudyPC" number="1" gateway="GenericIPGateway" location="PC_IP_ADDRESS" macAddress="PC_MAC_ADDRESS">
+        <trigger senderType="Remote" sender="PCRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="TurnOn">
+          <command>TurnOnStudyPC</command>
+        </trigger>
+        <trigger senderType="Remote" sender="PCRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="TurnOff">
+          <command>TurnOffStudyPC</command>
+        </trigger>
+        <trigger senderType="Schedule" sender="Schedule" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="TurnOn">
+          <command>BackupOnSchedule</command>
+        </trigger>
+        <trigger senderType="Schedule" sender="Schedule" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="TurnOff">
+          <command>BackupOffSchedule</command>
+        </trigger>
+      </Device>
+    </Zone>
+    <Zone name="Garden" number="5">
+      <Device type="SmartHomeControl.Devices.GreenIQ.GreenIQHub" name="GreenIQHub" number="1" gateway="GenericJSONWebGateway" location="https://greeniq.net/php/api/" accessKey="GREENIQ_ACCESS_KEY">
+        <trigger senderType="Remote" sender="TimerRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="StartCapturingData">
+          <command>StartCapturingGreenIQData</command>
+        </trigger>
+        <trigger senderType="Remote" sender="GreenIQRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="EnableValve">
+          <command>WaterLawn</command>
+        </trigger>
+        <trigger senderType="Remote" sender="GreenIQRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="EnableValve">
+          <command>WaterCeanothus</command>
+        </trigger>
+        <trigger senderType="Remote" sender="GreenIQRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="EnableValve">
+          <command>WaterFarLawnEdge</command>
+        </trigger>
+        <trigger senderType="Remote" sender="GreenIQRemote" actionType="SmartHomeControl.Devices.Generic.Events.GenericTriggerAction" sequence="1" action="EnableValve">
+          <command>WaterNearLawnEdge</command>
+        </trigger>        
+      </Device>      
+    </Zone>
+  </Zones>
+</Definition>

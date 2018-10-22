@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net461": {
+      "bin": {
+        "assembly": "../../ElectricityUsageLogger/IRTrans.NET.dll"
+      }
+    },
+    "net451": {
+      "bin": {
+        "assembly": "../../ElectricityUsageLogger/IRTrans.NET.dll"
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Definition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="LocalSettings">
+          <xs:complexType>
+            <xs:attribute name="address" type="xs:string" use="required" />
+            <xs:attribute name="dbConnection" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="1" minOccurs="1" name="Remotes">
+          <xs:complexType>
+            <xs:sequence>            
+              <xs:element maxOccurs="unbounded" name="Remote">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Commands">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="command" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="onProgramStart" type="xs:string" use="optional" />
+                        <xs:attribute name="voicePrompt" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="CommandLifeTime" type="xs:unsignedByte" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="1" minOccurs="1" name="Zones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Zone">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Device">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="trigger">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="command" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="senderType" type="xs:string" use="required" />
+                              <xs:attribute name="sender" type="xs:string" use="required" />
+                              <xs:attribute name="actionType" type="xs:string" use="required" />
+                              <xs:attribute name="sequence" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="action" type="xs:string" use="required" />
+                              <xs:attribute name="value" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="number" type="xs:unsignedByte" use="required" />
+                        <xs:attribute name="gateway" type="xs:string" use="required"></xs:attribute>
+                        <xs:attribute name="location" type="xs:string" use="optional"></xs:attribute>
+                        <xs:attribute name="port" type="xs:string" use="optional"></xs:attribute>
+                        <xs:attribute name="loggingPollInterval" type="xs:unsignedShort" use="optional" />
+                        <xs:attribute name="pinCode" type="xs:unsignedShort" use="optional" />
+                        <xs:attribute name="params" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="number" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
