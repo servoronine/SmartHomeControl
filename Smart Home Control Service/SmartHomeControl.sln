@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeControlLibrary", "ElectricityUsageLogger\SmartHomeControlLibrary.csproj", "{A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeControlServerUI", "ElectricityUsageLoggerTester\SmartHomeControlServerUI.csproj", "{03797E28-4BFB-4D1B-AD91-7A1FD6E8067E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F} = {A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EULWebControl", "EULWebControl\EULWebControl.csproj", "{1F57510C-B6F0-4E34-981E-37A73A2E65E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A7B4FC-8FBB-4A2C-A131-35973E67BE2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03797E28-4BFB-4D1B-AD91-7A1FD6E8067E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03797E28-4BFB-4D1B-AD91-7A1FD6E8067E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03797E28-4BFB-4D1B-AD91-7A1FD6E8067E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03797E28-4BFB-4D1B-AD91-7A1FD6E8067E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F57510C-B6F0-4E34-981E-37A73A2E65E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F57510C-B6F0-4E34-981E-37A73A2E65E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F57510C-B6F0-4E34-981E-37A73A2E65E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F57510C-B6F0-4E34-981E-37A73A2E65E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E98A592-7313-45F6-88AC-D547693448EF}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://voronin.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ElectricityUsageLogger\\SmartHomeControlLibrary.csproj
+		SccProjectName1 = ElectricityUsageLogger
+		SccLocalPath1 = ElectricityUsageLogger
+		SccProjectUniqueName2 = ElectricityUsageLoggerTester\\SmartHomeControlServerUI.csproj
+		SccProjectName2 = ElectricityUsageLoggerTester
+		SccLocalPath2 = ElectricityUsageLoggerTester
+	EndGlobalSection
+EndGlobal
