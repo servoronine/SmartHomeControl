@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="103.33dp"
+        android:layout_height="94.67dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/icon_sun"
+        android:layout_marginTop="99.33dp"
+        android:layout_alignParentTop="true"
+        android:hint="eg: bra"
+        android:textColorHint="#989898"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/textView2"
+        android:textColor="#f8f8f8"
+        android:textSize="43.33dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginLeft="65dp"
+        android:layout_marginBottom="-10px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter light name"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ececec"
+        android:textSize="20.67dp"
+        android:layout_marginTop="24.00dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="55.33dp"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:background="#ececec"
+        android:layout_marginLeft="10.67dp"
+        android:layout_marginRight="10.67dp"
+        android:layout_marginTop="26.00dp"
+        android:textSize="20.67dp"
+        android:paddingLeft="20.67dp"
+        android:paddingRight="20.67dp"
+        android:editable="true"
+        android:textColor="#323232"
+        android:textIsSelectable="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="9.33dp"
+        android:paddingRight="9.33dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="76.67dp">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="48.00dp"
+            android:layout_weight=".50"
+            android:allowUndo="false"
+            android:clickable="true"
+            android:text="Cancel"
+            android:textColor="#f8f8f8"
+            android:layout_marginRight="4px"
+            android:textAllCaps="false"
+            android:background="@drawable/cancel_button_state"
+            android:textSize="14.67dp"
+            android:enabled="true"
+            android:focusable="true"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="48.00dp"
+            android:layout_weight=".50"
+            android:text="Save"
+            android:background="@drawable/save_button_state"
+            android:textColor="#f8f8f8"
+            android:layout_marginLeft="4px"
+            android:textAllCaps="false"
+            android:textSize="14.67dp"
+            android:enabled="true"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

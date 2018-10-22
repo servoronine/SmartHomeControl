@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".login"
+    tools:showIn="@layout/activity_login"
+    android:paddingBottom="6dp">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="18dp"
+        android:text="Enter email:"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ececec"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="#ECECEC"
+        android:inputType="text"
+        android:paddingStart="50.66dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="18dp"
+        android:text="Enter password:"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ececec"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:background="#ECECEC"
+        android:inputType="textPassword"
+        android:paddingStart="50.66dp"
+        android:password="true"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText2">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight=".50"
+            android:allowUndo="false"
+            android:clickable="false"
+            android:text="Registration"
+            android:textColor="#f8f8f8"
+            android:layout_marginRight="4px"
+            android:textAllCaps="false"
+            android:background="@drawable/border_white"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight=".50"
+            android:text="Login"
+            android:background="#00B048"
+            android:textColor="#f8f8f8"
+            android:layout_marginLeft="4px"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="Google"
+        android:id="@+id/button2"
+        android:background="#FF482D"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="false"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="Facebook"
+        android:id="@+id/button3"
+        android:background="#373D68"
+        android:textColor="#ffffff"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="7dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:text="or login using:"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ececec"
+        android:textSize="17sp"
+        android:layout_above="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView57"
+        android:layout_alignTop="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/text_bg_login"/>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView58"
+        android:src="@drawable/text_bg_pass"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+</RelativeLayout>

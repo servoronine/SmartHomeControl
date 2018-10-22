@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <TableLayout
+        android:id="@+id/available_rooms_tiles_tl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.example.MainActivity"
+        android:gravity="top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:stretchColumns="*"
+        android:paddingBottom="1dp"
+        android:layout_centerHorizontal="true">
+
+    </TableLayout>
+
+</RelativeLayout>

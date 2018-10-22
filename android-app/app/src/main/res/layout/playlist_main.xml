@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57.33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:orientation="horizontal"
+        android:id="@+id/relativeLayout4"
+        android:paddingRight="14.00dp"
+        android:paddingLeft="14.67dp">
+
+        <ToggleButton
+            android:layout_width="34dp"
+            android:layout_height="32.67dp"
+            android:id="@+id/toggleButton"
+            android:onClick="onFavoriteClick"
+            android:background="@drawable/favorite_button"
+            android:textOn="@null"
+            android:textOff="@null"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="my music"
+            android:id="@+id/textView38"
+            android:textAlignment="gravity"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/button16"
+            android:layout_toEndOf="@+id/button16"
+            android:layout_marginLeft="10.67dp" />
+
+        <Button
+            android:layout_width="31.33dp"
+            android:layout_height="24.00dp"
+            android:id="@+id/button16"
+            android:background="@drawable/nav_folder_open"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignTop="@+id/playlist_on_nav_back"
+            android:layout_toRightOf="@+id/playlist_on_nav_back"
+            android:layout_toEndOf="@+id/button17"
+            android:layout_marginLeft="15.33dp"/>
+
+        <Button
+            android:layout_width="15.33dp"
+            android:layout_height="23.33dp"
+            android:id="@+id/playlist_on_nav_back"
+            android:onClick="onPlaylistNavClick"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/icon_left_24" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout6" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView62"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView41"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView62"
+                    android:layout_toEndOf="@+id/imageView62"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView42"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:background="#FF9813"
+                android:clickable="true"
+                android:onClick="onCurrentSongClick">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vancouver Beatdown"
+                    android:id="@+id/textView39"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:25"
+                    android:id="@+id/textView40"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#ffffff" />
+
+                <ToggleButton
+                    android:layout_width="9.33dp"
+                    android:layout_height="11.33dp"
+                    android:background="@drawable/playlist_play_pause"
+                    android:textOn="@null"
+                    android:textOff="@null"
+                    android:id="@+id/toggleButton5"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout5" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView64"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hoedown"
+                    android:id="@+id/textView43"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView64"
+                    android:layout_toEndOf="@+id/imageView64"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4:21"
+                    android:id="@+id/textView44"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout7" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView66"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City 2 City (feat. Belle Humble)"
+                    android:id="@+id/textView45"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView66"
+                    android:layout_toEndOf="@+id/imageView66"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:18"
+                    android:id="@+id/textView49"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout8" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView68"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deadwight"
+                    android:id="@+id/textView50"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView68"
+                    android:layout_toEndOf="@+id/imageView68"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4:26"
+                    android:id="@+id/main_temperature_degrees"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout9" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView70"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GorillaMarch"
+                    android:id="@+id/textView52"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView70"
+                    android:layout_toEndOf="@+id/imageView70"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4:26"
+                    android:id="@+id/textView53"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout10" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView72"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView54"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView72"
+                    android:layout_toEndOf="@+id/imageView72"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView55"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout11" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView74"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hoedown"
+                    android:id="@+id/textView56"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView74"
+                    android:layout_toEndOf="@+id/imageView74"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView57"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout12" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView76"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView58"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView76"
+                    android:layout_toEndOf="@+id/imageView76"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView59"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout13" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView78"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hoedown"
+                    android:id="@+id/textView60"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView78"
+                    android:layout_toEndOf="@+id/imageView78"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView61"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout14" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView80"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView62"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView80"
+                    android:layout_toEndOf="@+id/imageView80"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView63"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout15" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView82"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView64"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView82"
+                    android:layout_toEndOf="@+id/imageView82"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView65"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout16" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView84"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView66"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView84"
+                    android:layout_toEndOf="@+id/imageView84"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView67"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout17" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView86"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView68"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView86"
+                    android:layout_toEndOf="@+id/imageView86"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView69"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.33dp"
+                android:paddingLeft="13.33dp"
+                android:paddingRight="18.00dp"
+                android:id="@+id/relativeLayout18" >
+
+                <ImageView
+                    android:layout_width="7.33dp"
+                    android:layout_height="11.33dp"
+                    android:id="@+id/imageView88"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_play"
+                    android:layout_marginLeft="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuclear (Hands Up)"
+                    android:id="@+id/textView70"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView88"
+                    android:layout_toEndOf="@+id/imageView88"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:17"
+                    android:id="@+id/textView71"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="8.00dp"
+                    android:textColor="#7a7a7a" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

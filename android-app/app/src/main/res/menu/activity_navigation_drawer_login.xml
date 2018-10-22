@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/main_verst"
+            android:title="main"/>
+
+        <item
+            android:id="@+id/base"
+            android:title="room"/>
+
+        <item
+            android:id="@+id/lighting"
+            android:title="lighting"/>
+
+        <item
+            android:id="@+id/energy"
+            android:title="energy"/>
+
+        <item
+            android:id="@+id/vacation"
+            android:title="vacation"/>
+
+        <item
+            android:id="@+id/music_playlist_verst"
+            android:title="music_playlist"/>
+    </group>
+
+</menu>

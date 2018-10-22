@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/frameLayout3"
+            android:layout_above="@+id/space">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView5">
+
+            <TableLayout
+                tools:context="com.example.example.MainActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:stretchColumns="*"
+                android:background="@drawable/border"
+                android:paddingBottom="1dp"
+                android:id="@+id/tableLayout3">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView98"
+                            android:src="@drawable/main_lounge"
+                            android:layout_below="@+id/relativeLayout22"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/relativeLayout22"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="off"
+                                android:id="@+id/textView51"
+                                android:textColor="#40f8f8f8"
+                                android:textSize="15sp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView99"
+                                android:src="@drawable/main_temperature_off"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lounge"
+                            android:id="@+id/textView95"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView98"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView100"
+                            android:src="@drawable/main_bedroom"
+                            android:paddingTop="5dp"
+                            android:layout_below="@+id/relativeLayout27"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:id="@+id/relativeLayout27"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView101"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/main_temperature_cold"/>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:paddingLeft="2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="18"
+                                    android:id="@+id/textView96"
+                                    android:textColor="#286bcb"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"
+                                    android:numeric="integer"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="°"
+                                    android:id="@+id/textView97"
+                                    android:textColor="#286bcb"
+                                    android:textSize="16sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bedroom"
+                            android:id="@+id/textView98"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView100"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="74dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView102"
+                            android:src="@drawable/main_bathroom"
+                            android:layout_below="@+id/relativeLayout28"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:id="@+id/relativeLayout28"
+                            android:layout_marginBottom="8dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:paddingLeft="2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="24"
+                                    android:id="@+id/textView99"
+                                    android:numeric="integer"
+                                    android:textColor="#e27c2b"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="°"
+                                    android:id="@+id/textView100"
+                                    android:textColor="#e27c2b"
+                                    android:textSize="16sp"
+                                    android:layout_alignTop="@+id/textView99"
+                                    android:layout_toRightOf="@+id/textView99"
+                                    android:layout_toEndOf="@+id/textView99"
+                                    android:fontFamily="sans-serif-light"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView103"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/main_temperature_hot"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bathroom"
+                            android:id="@+id/textView101"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView102"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView121"
+                            android:src="@drawable/main_study"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_below="@+id/frameLayout"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="4dp"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Study"
+                            android:id="@+id/textView102"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView121"
+                            android:layout_centerHorizontal="true"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/frameLayout"
+                            android:layout_marginBottom="8dp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView122"
+                            android:src="@drawable/main_kitchen"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_below="@+id/relativeLayout37"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:id="@+id/relativeLayout37"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView123"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/main_temperature_cold"/>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:paddingLeft="2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="19"
+                                    android:id="@+id/textView128"
+                                    android:textColor="#286bcb"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"
+                                    android:numeric="integer"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="°"
+                                    android:id="@+id/textView129"
+                                    android:textColor="#286bcb"
+                                    android:textSize="16sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kitchen"
+                            android:id="@+id/textView130"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView122"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView124"
+                            android:src="@drawable/main_dining_room"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_below="@+id/relativeLayout38"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:id="@+id/relativeLayout38"
+                            android:layout_marginBottom="8dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:paddingLeft="2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="21"
+                                    android:id="@+id/textView131"
+                                    android:numeric="integer"
+                                    android:textColor="#e27c2b"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="°"
+                                    android:id="@+id/textView132"
+                                    android:textColor="#e27c2b"
+                                    android:textSize="16sp"
+                                    android:layout_alignTop="@+id/textView131"
+                                    android:layout_toRightOf="@+id/textView131"
+                                    android:layout_toEndOf="@+id/textView131"
+                                    android:fontFamily="sans-serif-light"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView125"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/main_temperature_hot"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dining room"
+                            android:id="@+id/textView133"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView124"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView126"
+                            android:src="@drawable/main_lounge"
+                            android:layout_below="@+id/relativeLayout39"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/relativeLayout39"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="off"
+                                android:id="@+id/textView134"
+                                android:textColor="#40f8f8f8"
+                                android:textSize="15sp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView127"
+                                android:src="@drawable/main_temperature_off"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lounge"
+                            android:id="@+id/textView135"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView126"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView128"
+                            android:src="@drawable/main_bedroom"
+                            android:paddingTop="5dp"
+                            android:layout_below="@+id/relativeLayout40"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:id="@+id/relativeLayout40"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView129"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/main_temperature_cold"/>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:paddingLeft="2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="18"
+                                    android:id="@+id/textView136"
+                                    android:textColor="#286bcb"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"
+                                    android:numeric="integer"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="°"
+                                    android:id="@+id/textView137"
+                                    android:textColor="#286bcb"
+                                    android:textSize="16sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bedroom"
+                            android:id="@+id/textView138"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView128"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="74dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/imageView130"
+                            android:src="@drawable/main_bathroom"
+                            android:layout_below="@+id/relativeLayout41"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"/>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:id="@+id/relativeLayout41"
+                            android:layout_marginBottom="8dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:paddingLeft="2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="24"
+                                    android:id="@+id/textView139"
+                                    android:numeric="integer"
+                                    android:textColor="#e27c2b"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="°"
+                                    android:id="@+id/textView140"
+                                    android:textColor="#e27c2b"
+                                    android:textSize="16sp"
+                                    android:layout_alignTop="@+id/textView139"
+                                    android:layout_toRightOf="@+id/textView139"
+                                    android:layout_toEndOf="@+id/textView139"
+                                    android:fontFamily="sans-serif-light"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/imageView131"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/main_temperature_hot"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bathroom"
+                            android:id="@+id/textView141"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:textColor="#f8f8f8"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/imageView130"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/space"
+        android:layout_above="@+id/frameLayout2"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#72000000"
+            android:gravity="center"
+            android:layout_rowWeight="1"
+            android:paddingTop="25dp"
+            android:paddingBottom="36dp">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:id="@+id/button18"
+                android:onClick="onMinusButtonMainClick"
+                android:background="@drawable/button_minus"
+                android:layout_alignBottom="@+id/textView143"
+                android:layout_toLeftOf="@+id/main_temperature_degrees"
+                android:layout_toStartOf="@+id/main_temperature_degrees"
+                android:layout_marginRight="25dp"/>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:id="@+id/button22"
+                android:onClick="onPlusButtonMainClick"
+                android:background="@drawable/button_plus"
+                android:nestedScrollingEnabled="true"
+                android:layout_alignTop="@+id/button18"
+                android:layout_toRightOf="@+id/main_temperature_degrees"
+                android:layout_toEndOf="@+id/main_temperature_degrees"
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="24"
+                android:id="@+id/main_temperature_degrees"
+                android:textColor="#e27c2b"
+                android:textSize="81sp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="sans-serif-thin"
+                android:layout_below="@+id/textView144"
+                android:layout_centerHorizontal="true"
+                android:enabled="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="°"
+                android:id="@+id/textView143"
+                android:textSize="72sp"
+                android:textColor="#e27c2b"
+                android:fontFamily="sans-serif-thin"
+                android:layout_alignTop="@+id/main_temperature_degrees"
+                android:layout_toRightOf="@+id/main_temperature_degrees"
+                android:layout_toEndOf="@+id/main_temperature_degrees"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="The overall temperature of house"
+                android:id="@+id/textView144"
+                android:layout_centerHorizontal="true"
+                android:textColor="#f8f8f8"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

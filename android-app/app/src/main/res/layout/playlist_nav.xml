@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:paddingLeft="20.67dp"
+                android:paddingRight="20.67dp"
+                android:paddingTop="16.67dp"
+                android:paddingBottom="16.67dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/playlist_nav">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout5">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="21.33dp">
+
+                <ImageView
+                    android:layout_width="31.33dp"
+                    android:layout_height="24.00dp"
+                    android:id="@+id/imageView33"
+                    android:background="@drawable/nav_folder_open" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Computer"
+                    android:id="@+id/textView24"
+                    android:textSize="20.00dp"
+                    android:layout_marginLeft="11.33dp"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="41.33dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout6">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="21.33dp">
+
+                        <ImageView
+                            android:layout_width="31.33dp"
+                            android:layout_height="24.00dp"
+                            android:id="@+id/imageView34"
+                            android:background="@drawable/nav_folder_open" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Windows (C:)"
+                            android:id="@+id/textView26"
+                            android:textSize="20.00dp"
+                            android:layout_marginLeft="11.33dp"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout6"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="21.33dp" >
+
+                        <ImageView
+                            android:layout_width="31.33dp"
+                            android:layout_height="24.00dp"
+                            android:id="@+id/imageView35"
+                            android:background="@drawable/nav_folder_open" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RECOVERY (D:)"
+                            android:id="@+id/textView27"
+                            android:textSize="20.00dp"
+                            android:layout_marginLeft="11.33dp"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="41.33dp" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayout7" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="21.33dp"
+                                android:clickable="true"
+                                android:onClick="onPlaylistMainClick"
+                                android:id="@+id/playlist_my_music">
+
+                                <ImageView
+                                    android:layout_width="31.33dp"
+                                    android:layout_height="24.00dp"
+                                    android:id="@+id/imageView36"
+                                    android:background="@drawable/nav_folder_open" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="my music"
+                                    android:id="@+id/textView28"
+                                    android:textSize="20.00dp"
+                                    android:layout_marginLeft="11.33dp"
+                                    android:textColor="#ffffff" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayout8"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/linearLayout7">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="21.33dp" >
+
+                                <ImageView
+                                    android:layout_width="31.33dp"
+                                    android:layout_height="24.00dp"
+                                    android:id="@+id/imageView37"
+                                    android:background="@drawable/nav_folder_open" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="my video"
+                                    android:id="@+id/textView29"
+                                    android:textSize="20.00dp"
+                                    android:layout_marginLeft="11.33dp"
+                                    android:textColor="#ffffff" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayout9"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/linearLayout8" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="21.33dp" >
+
+                                <ImageView
+                                    android:layout_width="31.33dp"
+                                    android:layout_height="24.00dp"
+                                    android:id="@+id/imageView38"
+                                    android:background="@drawable/nav_folder_open" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="games"
+                                    android:id="@+id/textView30"
+                                    android:textSize="20.00dp"
+                                    android:layout_marginLeft="11.33dp"
+                                    android:textColor="#ffffff" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

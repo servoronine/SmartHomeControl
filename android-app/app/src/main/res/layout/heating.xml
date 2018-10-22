@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout2"
+        android:layout_marginTop="79.33dp">
+
+        <ProgressBar
+            android:layout_width="315dp"
+            android:layout_height="285dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="false"
+            android:id="@+id/myProgress"
+            android:progress="100"
+            android:secondaryProgress="100"
+            android:progressDrawable="@drawable/progressbarstyle"
+            android:layout_gravity="center"
+            android:max="100"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="24"
+            android:id="@+id/heating_degree"
+            android:textSize="125sp"
+            android:textColor="#e27c2b"
+            android:typeface="normal"
+            android:singleLine="false"
+            android:contextClickable="false"
+            android:fontFamily="sans-serif-light"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="°"
+            android:id="@+id/degree"
+            android:textSize="120sp"
+            android:textColor="#e27c2b"
+            android:fontFamily="sans-serif-light"
+            android:layout_toEndOf="@+id/heating_degree"
+            android:layout_alignBaseline="@+id/heating_degree"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:id="@+id/button5"
+            android:onClick="onMinusButtonClick"
+            android:background="@drawable/button_minus"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView46"
+            android:layout_toStartOf="@+id/textView46"/>
+
+        <Button
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:id="@+id/button4"
+            android:onClick="onPlusButtonClick"
+            android:background="@drawable/button_plus"
+            style="?android:attr/borderlessButtonStyle"
+            android:nestedScrollingEnabled="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView46"
+            android:layout_toEndOf="@+id/textView46"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Heating"
+            android:id="@+id/textView46"
+            android:textColor="#f8f8f8"
+            android:textSize="19sp"
+            android:paddingRight="44dp"
+            android:paddingLeft="44dp"
+            android:paddingTop="12dp"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/login_layout"
+            android:title="login_layout"/>
+
+        <item
+            android:id="@+id/base"
+            android:title="room"/>
+
+        <item
+            android:id="@+id/room_new"
+            android:title="new_room"/>
+
+        <item
+            android:id="@+id/tiles"
+            android:title="tiles"/>
+
+        <item
+            android:id="@+id/onHoliday_AtHome"
+            android:title="on holiday/at home"/>
+
+        <item
+            android:id="@+id/temperature"
+            android:title="temperature"/>
+
+        <item
+            android:id="@+id/hot_water"
+            android:title="hot_water"/>
+
+        <item
+            android:id="@+id/lighting"
+            android:title="lighting"/>
+
+        <item
+            android:id="@+id/energy"
+            android:title="energy"/>
+
+        <item
+            android:id="@+id/vacation"
+            android:title="vacation"/>
+
+        <item
+            android:id="@+id/music_playlist_verst"
+            android:title="music_playlist"/>
+
+        <item
+            android:id="@+id/going_map"
+            android:title="map"/>
+
+        <item
+            android:id="@+id/available_rooms"
+            android:title="available rooms"/>
+
+    </group>
+
+</menu>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/energy_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="59.33dp"
+            android:background="@color/toolbar_color"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/header_text_vacation"
+                android:layout_gravity="center_horizontal"
+                android:typeface="sans"
+                android:textColor="#d24a43"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:textSize="29.33dp"
+                android:text="VACATION"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
+                    android:layout_below="@id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/top_shadow"
+            android:layout_gravity="bottom"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59.33dp"
+            android:id="@+id/view"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="0dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tableLayout">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="0"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="46.00dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"
+                        android:src="@drawable/icon_lights"
+                        android:layout_gravity="bottom|center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lighting"
+                        android:id="@+id/textView8"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#f8f8f8"
+                        android:textSize="12.00dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="1"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="42.00dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/icon_heating"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="2.67dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heating"
+                        android:id="@+id/textView7"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:textSize="12.00dp"
+                        android:textColor="#f8f8f8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="2"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="47.33dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/icon_music"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="2.67dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Music"
+                        android:id="@+id/textView6"
+                        android:textColor="#f8f8f8"
+                        android:textSize="12.00dp"
+                        android:layout_gravity="bottom|center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="3"
+                    android:layout_gravity="top"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="41.33dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/icon_tv"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:adjustViewBounds="false"
+                        android:baselineAlignBottom="false"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TV"
+                        android:id="@+id/textView5"
+                        android:textColor="#f8f8f8"
+                        android:textSize="12.00dp"
+                        android:layout_gravity="bottom|center_horizontal" />
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/bottom_shadow"
+            android:layout_gravity="bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tableLayout"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_gravity="bottom"
+            android:id="@+id/tableLayout7"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="61.33dp"
+            android:background="#5f12283a"
+            android:paddingTop="6dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="32dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="From"
+                    android:id="@+id/textView107"
+                    android:textColor="#f8f8f8"
+                    android:layout_span="2"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="6dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="To"
+                    android:id="@+id/textView108"
+                    android:textColor="#f8f8f8"
+                    android:layout_span="2"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="6dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="4dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:layout_marginLeft="6dp">
+
+                    <Button
+                        android:id="@+id/fromtimepicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:padding="2dp"
+                        android:text="Set time"
+                        android:textAllCaps="false"
+                        android:textColor="#f8f8f8"
+                        android:textStyle="normal"
+                        android:layout_marginLeft="0dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/space3"
+                        android:layout_alignParentLeft="true"/>
+
+                    <Button
+                        android:id="@+id/fromdatepicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:padding="2dp"
+                        android:text="Set Date"
+                        android:textAllCaps="false"
+                        android:textColor="#f8f8f8"
+                        android:textStyle="normal"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/space3"
+                        android:layout_alignParentRight="true"/>
+
+                    <Space
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/space3"
+                        android:layout_alignBottom="@+id/fromtimepicker"
+                        android:layout_alignTop="@+id/fromtimepicker"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:layout_marginLeft="6dp">
+
+                    <Button
+                        android:id="@+id/totimepicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:padding="2dp"
+                        android:text="Set Time"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textStyle="normal"
+                        android:layout_marginLeft="0dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/space4"
+                        android:layout_alignParentLeft="true"/>
+
+                    <Button
+                        android:id="@+id/todatepicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:padding="2dp"
+                        android:text="Set Date"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textStyle="normal"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/space4"
+                        android:layout_alignParentRight="true"/>
+
+                    <Space
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/space4"
+                        android:layout_alignTop="@+id/totimepicker"
+                        android:layout_alignBottom="@+id/totimepicker"/>
+                </RelativeLayout>
+
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

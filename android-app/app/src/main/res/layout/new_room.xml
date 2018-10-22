@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_room"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="59.33dp"
+            android:background="@color/toolbar_color"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/header_text3"
+                android:layout_gravity="center_horizontal"
+                android:typeface="sans"
+                android:textColor="#d24a43"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:textSize="29.33dp"
+                android:text="SELECT ROOM"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="59.33dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="67.33dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Select room icon"
+            android:id="@+id/textView56"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ededed"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="0dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/border"
+            android:id="@+id/tableLayout4"
+            android:layout_below="@+id/textView56"
+            android:layout_centerHorizontal="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:elegantTextHeight="false"
+                    android:foreground="@drawable/new_kitchen_icon_selector"
+                    android:foregroundGravity="fill"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton2"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foreground="@drawable/new_dining_room_icon_selector"
+                    android:foregroundGravity="fill"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton3"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foreground="@drawable/new_garden_icon_selector"
+                    android:foregroundGravity="fill"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton4"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foreground="@drawable/new_study_icon_selector"
+                    android:foregroundGravity="fill"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton10"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foreground="@drawable/new_bathroom_icon_selector"
+                    android:foregroundGravity="fill"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="0">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton6"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foregroundGravity="fill"
+                    android:foreground="@drawable/new_bedroom_icon_selector"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton7"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foregroundGravity="fill"
+                    android:foreground="@drawable/new_hallway_icon_selector"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton8"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foregroundGravity="fill"
+                    android:foreground="@drawable/new_lounge_icon_selector"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="82dp"
+                    android:id="@+id/toggleButton9"
+                    android:background="@drawable/room_border_selector"
+                    android:layout_weight="1"
+                    android:textOff="@null"
+                    android:textOn="@null"
+                    android:foregroundGravity="fill"
+                    android:foreground="@drawable/new_front_door_icon_selector"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border">
+                </FrameLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Enter room name"
+            android:id="@+id/textView52"
+            android:layout_below="@+id/tableLayout4"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ededed"
+            android:layout_marginTop="14dp"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ECECEC"
+            android:inputType="text"
+            android:paddingStart="50.66dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/textView52"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="14dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="0dp"
+                android:layout_height="48.00dp"
+                android:layout_weight=".50"
+                android:allowUndo="false"
+                android:clickable="true"
+                android:text="Cancel"
+                android:textColor="#f8f8f8"
+                android:layout_marginRight="4px"
+                android:textAllCaps="false"
+                android:background="@drawable/cancel_button_state"
+                android:textSize="14.67dp"
+                android:enabled="true"
+                android:focusable="true"/>
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="0dp"
+                android:layout_height="48.00dp"
+                android:layout_weight=".50"
+                android:text="Save"
+                android:background="@drawable/save_button_state"
+                android:textColor="#f8f8f8"
+                android:layout_marginLeft="4px"
+                android:textAllCaps="false"
+                android:textSize="14.67dp"
+                android:clickable="true"
+                android:enabled="true"
+                android:focusable="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

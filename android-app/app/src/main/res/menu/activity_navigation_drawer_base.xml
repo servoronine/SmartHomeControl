@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/login_layout"
+            android:title="login_layout"/>
+
+        <item
+            android:id="@+id/main_verst"
+            android:title="main"/>
+
+        <item
+            android:id="@+id/light"
+            android:title="light"/>
+
+        <item
+            android:id="@+id/light_add"
+            android:title="add light"/>
+
+        <item
+            android:id="@+id/heating_verst"
+            android:title="heating"/>
+
+        <item
+            android:id="@+id/theme"
+            android:title="theme"/>
+
+        <item
+            android:id="@+id/tv"
+            android:title="tv"/>
+
+        <item
+            android:id="@+id/music_new"
+            android:title="music_new"/>
+
+        <item
+            android:id="@+id/energy"
+            android:title="energy"/>
+
+        <item
+            android:id="@+id/vacation"
+            android:title="vacation"/>
+
+        <item
+            android:id="@+id/lighting"
+            android:title="lighting"/>
+
+        <item
+            android:id="@+id/music_playlist_verst"
+            android:title="music_playlist"/>
+
+        <item
+            android:id="@+id/going_map"
+            android:title="going_map"/>
+    </group>
+
+</menu>

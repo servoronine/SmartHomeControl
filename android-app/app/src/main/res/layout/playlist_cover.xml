@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="11.33dp"
+        android:paddingLeft="14.67dp"
+        android:paddingRight="14.67dp"
+        android:paddingBottom="13.33dp"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="34.00dp"
+            android:layout_height="32.67dp"
+            android:id="@+id/imageView39"
+            android:background="@drawable/star_big"
+            android:layout_marginRight="12.67dp"
+            android:clickable="true"
+            android:onClick="onFavoriteClick"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorites"
+            android:id="@+id/textView31"
+            android:textSize="20.00dp"
+            android:textAlignment="gravity"
+            android:layout_toRightOf="@+id/imageView39"
+            android:layout_centerVertical="true"
+            android:textColor="#f8f8f8"/>
+
+        <ImageView
+            android:layout_width="31.33dp"
+            android:layout_height="24.00dp"
+            android:id="@+id/imageView40"
+            android:background="@drawable/nav_folder_open"
+            android:layout_gravity="center_vertical|right"
+            android:baselineAlignBottom="false"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onPlaylistMainClick"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="42dp"
+        android:paddingRight="42dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView41"
+            android:src="@drawable/album_sample"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67.33dp"
+        android:text="Presets/Moods"
+        android:id="@+id/textView18"
+        android:layout_marginTop="59.33dp"
+        android:textColor="#f8f8f8"
+        android:textSize="20.67dp"
+        android:textIsSelectable="true"
+        android:linksClickable="false"
+        android:singleLine="false"
+        android:textAlignment="gravity"
+        android:gravity="fill_vertical|center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/textView18"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:orientation="vertical"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/button_background"
+                android:paddingRight="7dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="70.00dp"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:layout_width="28.67dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView10"
+                            android:src="@drawable/icon_romantic"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Romantic"
+                        android:id="@+id/textView19"
+                        android:textColor="#f8f8f8"
+                        android:textAlignment="gravity"
+                        android:gravity="left|center|clip_vertical"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    android:gravity="center_vertical|right">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView11"
+                        android:src="@mipmap/mini_icon_tv"
+                        android:contentDescription=""
+                        android:layout_marginLeft="2dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView12"
+                        android:src="@mipmap/mini_icon_light"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView13"
+                        android:src="@mipmap/mini_icon_heat"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView18"
+                        android:src="@mipmap/mini_icon_music"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp"/>
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="7dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50" >
+
+                    <FrameLayout
+                        android:layout_width="70.00dp"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:layout_width="28.67dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView15"
+                            android:src="@drawable/icon_party"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Party"
+                        android:id="@+id/textView20"
+                        android:textColor="#f8f8f8"
+                        android:textAlignment="gravity"
+                        android:gravity="left|center|clip_vertical"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    android:gravity="center_vertical|right">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView30"
+                        android:src="@mipmap/mini_icon_heat"
+                        android:contentDescription=""
+                        android:layout_marginLeft="2dp"/>
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView31"
+                        android:src="@mipmap/mini_icon_music"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:paddingRight="7dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="70.00dp"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:layout_width="28.67dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView16"
+                            android:src="@drawable/icon_tv"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=" Watch TV"
+                        android:id="@+id/textView21"
+                        android:textColor="#f8f8f8"
+                        android:textAlignment="gravity"
+                        android:gravity="left|center|clip_vertical"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    android:gravity="center_vertical|right" >
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView21"
+                        android:src="@mipmap/mini_icon_light"
+                        android:contentDescription=""
+                        android:layout_marginLeft="2dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView17"
+                        android:src="@mipmap/mini_icon_heat"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView20"
+                        android:src="@mipmap/mini_icon_music"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="7dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="70.00dp"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:layout_width="28.67dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView22"
+                            android:src="@drawable/icon_tv_projector"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="162dp"
+                        android:layout_height="match_parent"
+                        android:text=" Watch Movie \n (On Projector)"
+                        android:id="@+id/textView22"
+                        android:textColor="#f8f8f8"
+                        android:textAlignment="gravity"
+                        android:gravity="left|center|clip_vertical"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    android:gravity="center_vertical|right" >
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView23"
+                        android:src="@mipmap/mini_icon_light"
+                        android:contentDescription=""
+                        android:layout_marginLeft="2dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView24"
+                        android:src="@mipmap/mini_icon_heat"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView25"
+                        android:src="@mipmap/mini_icon_music"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="7dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="70.00dp"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:layout_width="28.67dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView26"
+                            android:src="@drawable/icon_game"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=" Watch TV"
+                        android:id="@+id/textView23"
+                        android:textColor="#f8f8f8"
+                        android:textAlignment="gravity"
+                        android:gravity="left|center|clip_vertical"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    android:gravity="center_vertical|right" >
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView28"
+                        android:src="@mipmap/mini_icon_heat"
+                        android:contentDescription=""
+                        android:layout_marginLeft="2dp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView29"
+                        android:src="@mipmap/mini_icon_music"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="7dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50">
+
+                    <FrameLayout
+                        android:layout_width="70.00dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="28.67dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView19"
+                            android:src="@drawable/icon_game_projector"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=" Watch TV \n (On Projector)"
+                        android:id="@+id/textView25"
+                        android:textColor="#f8f8f8"
+                        android:textAlignment="gravity"
+                        android:gravity="left|center|clip_vertical"
+                        android:textSize="19sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    android:gravity="center_vertical|right">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView14"
+                        android:src="@mipmap/mini_icon_light"
+                        android:contentDescription=""
+                        android:layout_marginLeft="2dp"/>
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView27"
+                        android:src="@mipmap/mini_icon_heat"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp"/>
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView32"
+                        android:src="@mipmap/mini_icon_music"
+                        android:contentDescription=""
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

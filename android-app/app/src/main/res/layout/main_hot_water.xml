@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hot Water"
+        android:id="@+id/textView53"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#f4f4f4"
+        android:layout_marginTop="36dp"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView65"
+        android:layout_below="@+id/textView53"
+        android:src="@drawable/main_hot_water"
+        android:layout_alignLeft="@+id/textView53"
+        android:layout_alignStart="@+id/textView53"
+        android:layout_alignRight="@+id/textView53"
+        android:layout_alignEnd="@+id/textView53"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:thumb="@drawable/hot_water_thumb"
+        android:track="@drawable/hot_water_track"
+        android:showText="false"
+        android:layout_below="@+id/imageView65"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:textColor="#72000000"
+        android:switchPadding="8dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="OFF"
+        android:id="@+id/textView57"
+        android:layout_toLeftOf="@+id/switch1"
+        android:layout_toStartOf="@+id/imageView65"
+        android:layout_alignBaseline="@+id/switch1"
+        android:textColor="#f8f8f8"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ON"
+        android:id="@+id/textView58"
+        android:textColor="#f8f8f8"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/textView57"
+        android:layout_toRightOf="@+id/imageView65"
+        android:layout_toEndOf="@+id/imageView65"
+        android:textSize="20sp"/>
+</RelativeLayout>

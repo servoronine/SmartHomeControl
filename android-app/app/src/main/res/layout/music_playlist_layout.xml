@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/music_playlist_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="59.33dp"
+            android:background="@color/toolbar_color"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/header_text3"
+                android:layout_gravity="center_horizontal"
+                android:typeface="sans"
+                android:textColor="#d24a43"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:textSize="29.33dp"
+                android:text="PLAYLIST"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="0dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tableLayout">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="0"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="46.00dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"
+                        android:src="@drawable/icon_lights"
+                        android:layout_gravity="bottom|center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lighting"
+                        android:id="@+id/textView8"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#f8f8f8"
+                        android:textSize="12.00dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="1"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="42.00dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/icon_heating"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="2.67dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heating"
+                        android:id="@+id/textView7"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:textSize="12.00dp"
+                        android:textColor="#f8f8f8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="2"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="47.33dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/icon_music"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="2.67dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Music"
+                        android:id="@+id/textView6"
+                        android:textColor="#f8f8f8"
+                        android:textSize="12.00dp"
+                        android:layout_gravity="bottom|center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="113.33dp"
+                    android:layout_column="3"
+                    android:layout_gravity="top"
+                    android:gravity="bottom"
+                    android:paddingBottom="14.67dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/button_background">
+
+                    <ImageView
+                        android:layout_width="41.33dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/icon_tv"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:adjustViewBounds="false"
+                        android:baselineAlignBottom="false"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TV"
+                        android:id="@+id/textView5"
+                        android:textColor="#f8f8f8"
+                        android:textSize="12.00dp"
+                        android:layout_gravity="bottom|center_horizontal" />
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
